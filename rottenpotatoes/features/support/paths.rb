@@ -22,6 +22,8 @@ module NavigationHelpers
     when /^the Similar Movies page for "(.*)"/
       @movie_id = Movie.find_by_title($1).id
       movie_similar_path(@movie_id)
+    when /^the RottenPotatoes home page$/
+      movies_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
